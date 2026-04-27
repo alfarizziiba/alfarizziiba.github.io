@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Alfarizzi Portfolio</title>
+<title>Portfolio Saya</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:sans-serif;
-}
-
-body{
-background:#ffffff;
-color:#111;
-transition:0.3s;
+:root{
+--bg:#ffffff;
+--text:#222;
+--card:#f4f4f4;
 }
 
 .dark{
-background:#0f172a;
-color:white;
+--bg:#121212;
+--text:#ffffff;
+--card:#1f1f1f;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:0.3s;
 }
 
 header{
@@ -31,137 +32,144 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 10%;
-position:sticky;
-top:0;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
 }
 
-.dark header{
-background:rgba(15,23,42,0.7);
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:inherit;
-font-weight:500;
+button{
+padding:8px 14px;
+border:none;
+cursor:pointer;
+border-radius:6px;
 }
 
 .hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-padding:20px;
+padding:80px 20px;
+animation:fadeUp 1s ease;
 }
 
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
+.hero img{
+width:140px;
+border-radius:50%;
 }
 
-.hero p{
-opacity:0.7;
-margin-bottom:20px;
-}
-
-.btn{
-padding:12px 24px;
-border-radius:8px;
-background:#6366f1;
-color:white;
-text-decoration:none;
+section{
+padding:60px 10%;
 }
 
 .projects{
-padding:80px 10%;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:20px;
 }
 
 .card{
-padding:25px;
-border-radius:12px;
-background:#f3f4f6;
+background:var(--card);
+padding:20px;
+border-radius:10px;
 transition:0.3s;
 }
 
-.dark .card{
-background:#1e293b;
-}
-
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
 }
 
 footer{
 text-align:center;
-padding:40px;
-opacity:0.6;
+padding:30px;
+opacity:0.7;
 }
 
-/* mobile */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 
-@media(max-width:700px){
+/* responsive mobile */
 
-.hero h1{
-font-size:32px;
+@media(max-width:600px){
+
+header{
+padding:20px;
+}
+
+section{
+padding:40px 20px;
+}
+
+.hero{
+padding:60px 20px;
 }
 
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
 
-<h3>Alfarizzi</h3>
+<h2>Portfolio</h2>
 
-<nav>
-<a href="#">Home</a>
-<a href="#projects">Projects</a>
 <button onclick="toggleDark()">🌙</button>
-</nav>
 
 </header>
 
 <section class="hero">
 
-<h1>Hi, I'm Alfarizzi</h1>
+<img src="images/foto.jpg">
 
-<p>Web Developer • AI Tools • Creative Projects</p>
+<h1>Halo, Saya Lusy</h1>
 
-<a class="btn" href="#projects">See My Work</a>
+<p>Web Developer | UI Designer</p>
 
 </section>
 
-<section id="projects" class="projects">
+<section>
+
+<h2>Tentang Saya</h2>
+
+<p>
+Saya sedang belajar membuat website dan portfolio menggunakan HTML, CSS, dan GitHub Pages.
+</p>
+
+</section>
+
+<section>
+
+<h2>Project</h2>
+
+<div class="projects">
 
 <div class="card">
-<h3>AI Tool</h3>
-<p>Simple AI web tool project.</p>
+<h3>Website Portfolio</h3>
+<p>Website portfolio pribadi.</p>
+</div>
+
+<div class="card">
+<h3>Website CV</h3>
+<p>Halaman CV online.</p>
 </div>
 
 <div class="card">
 <h3>Landing Page</h3>
-<p>Modern responsive landing page.</p>
+<p>Desain landing page modern.</p>
 </div>
 
-<div class="card">
-<h3>GitHub Project</h3>
-<p>Open source project on GitHub.</p>
 </div>
 
 </section>
 
 <footer>
-© 2026 Alfarizzi
+
+© 2026 Portfolio Saya
+
 </footer>
 
 <script>
