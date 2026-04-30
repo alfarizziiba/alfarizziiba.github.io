@@ -39,8 +39,19 @@ transform:translateY(-5px);
 
 /* dark mode */
 
-.dark{
-background:#121212;
+#toggle{
+border:2px solid white;
+background:transparent;
+color:white;
+padding:6px 12px;
+border-radius:20px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.dark #toggle{
+border-color:white;
 color:white;
 }
 
