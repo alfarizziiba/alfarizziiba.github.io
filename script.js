@@ -1,3 +1,5 @@
+// DARK MODE
+
 const toggle = document.getElementById("toggle");
 
 toggle.onclick = () => {
@@ -11,3 +13,27 @@ toggle.textContent="🌙";
 }
 
 };
+
+
+// TYPING EFFECT
+
+const text = "Web Developer";
+const typing = document.querySelector(".typing");
+
+let i = 0;
+
+function type(){
+
+if(i < text.length){
+
+typing.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(type,100);
+
+}
+
+}
+
+type();
