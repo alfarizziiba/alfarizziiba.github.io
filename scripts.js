@@ -1,4 +1,4 @@
-// DARK MODE
+document.addEventListener("DOMContentLoaded", function(){
 
 const toggle = document.getElementById("toggle");
 
@@ -15,7 +15,7 @@ toggle.textContent="🌙";
 };
 
 
-// TYPING EFFECT
+// typing effect
 
 const text = "Web Developer";
 const typing = document.querySelector(".typing");
@@ -27,7 +27,6 @@ function type(){
 if(i < text.length){
 
 typing.innerHTML += text.charAt(i);
-
 i++;
 
 setTimeout(type,100);
@@ -37,3 +36,5 @@ setTimeout(type,100);
 }
 
 type();
+
+});
